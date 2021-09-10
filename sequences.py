@@ -49,3 +49,15 @@ def even(stop=10, start=2):
 def triangular(end=10, start=0):
     for n in range(start, end):
         yield (n * (n + 1)) // 2
+
+
+def fib(num=10):
+    a = 1
+    b = 1
+    yield a
+    yield b
+    for _ in range(num):
+        c = a + b
+        yield c
+        a = b
+        b = c
